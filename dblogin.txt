@@ -1,0 +1,2 @@
+database: projektas-31303127e3
+password: qswzh1gmuf

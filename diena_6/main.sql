@@ -25,25 +25,31 @@ CREATE TABLE sales (
   order_id SMALLINT(10)
 );
 CREATE TABLE users (
-  id SMALLINT(10) AUTO_INCREMENT PRIMARY KEY,
+  id INT(10) AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(50),
+  password VARCHAR(50),
   name VARCHAR(50),
   lname VARCHAR(50),
   address VARCHAR(100),
-  postcode SMALLINT(10),
+  postcode VARCHAR(50),
   city VARCHAR(50),
-  order_quantity SMALLINT(10)
+  `date` DATETIME,
+  order_quantity INT(10)
 );
-CREATE TABLE sales (
+CREATE TABLE newsletter (
   id SMALLINT(10) AUTO_INCREMENT PRIMARY KEY,
   `date` DATETIME,
-  user_id SMALLINT(10),
-  product_id SMALLINT(10),
-  order_id SMALLINT(10)
+  email VARCHAR(50)
 );
 CREATE TABLE orders (
   id SMALLINT(10) AUTO_INCREMENT PRIMARY KEY,
-  user_id SMALLINT(10),
+  name VARCHAR(50),
+  lname VARCHAR(50),
+  email VARCHAR(50),
+  address VARCHAR(50),
+  postcode INT(10),
+  city VARCHAR(50),
+  tel VARCHAR(50),
   shipping_id SMALLINT(10),
   `date` DATETIME,
   product_quantity SMALLINT(10),
